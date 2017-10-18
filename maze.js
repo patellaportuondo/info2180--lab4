@@ -2,6 +2,7 @@ function  setUpEvent(){
 	var touch = document.getElementById("boundary1");
 	var bound = document.querySelectorAll(".boundary");
 	var end = document.getElementById("end");
+	var reset =document.getElementById("start");
 
 	touch.onmouseover =function(){
 		touch.classList.add("youlose");
@@ -22,6 +23,11 @@ function  setUpEvent(){
 		}
 	}
 
+	reset.onclick=function(){
+		for (var i = 0; i < bound.length-1; i++) {
+			bound[i].setAttribute("class", "boundary");
+		}
+	}
 
 }
 
