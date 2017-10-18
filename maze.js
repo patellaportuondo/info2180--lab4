@@ -1,7 +1,8 @@
 function  setUpEvent(){
 	var touch = document.getElementById("boundary1");
 	var bound = document.querySelectorAll(".boundary");
-	
+	var end = document.getElementById("end");
+
 	touch.onmouseover =function(){
 		touch.classList.add("youlose");
 	}
@@ -11,7 +12,14 @@ function  setUpEvent(){
 				bound[i].classList.add("youlose");
 			}
 		}
+	}
+	end.onmouseover=function(){
+		if (touch.getAttribute("class")=="boundary") {
+			console.log("YOU WIN!");
+		}else{ 
+			console.log("YOU LOSE !")
 
+		}
 	}
 
 
